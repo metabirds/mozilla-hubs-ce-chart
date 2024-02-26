@@ -201,6 +201,8 @@ spec:
             {{ toYaml .Values.sidecar.ports | nindent 12 }}
           env: 
             {{ toYaml .Values.sidecar.env | nindent 12 }}
+          resources:
+            {{ toYaml .Values.sidecar.resources | nindent 12 }}
         {{- end }}
 
       {{- with .Values.nodeSelector }}
