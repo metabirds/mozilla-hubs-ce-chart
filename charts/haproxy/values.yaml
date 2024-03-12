@@ -42,7 +42,7 @@ LoadBalancer:
       port: 443
       targetPort: 4443
     - name: dialog
-      port: 4443
+      port: 8443
       targetPort: 4443
     - name: turn
       port: 5349

@@ -181,7 +181,7 @@ config:
       janus_service_name = ""
       janus_admin_secret = ""
       janus_admin_port = 7000
-      janus_port = 4443
+      janus_port = 8443
 
       [ret."Elixir.Ret.Guardian"]
       secret_key = "<GUARDIAN_KEY>"
@@ -237,7 +237,7 @@ config:
 
       [ret."Elixir.RetWeb.Plugs.AddCSP"]
       child_src = ""
-      connect_src = "wss://*.stream.<HUB_DOMAIN>:4443"
+      connect_src = "wss://*.stream.<HUB_DOMAIN>:8443"
       font_src = ""
       form_action = ""
       frame_src = ""
