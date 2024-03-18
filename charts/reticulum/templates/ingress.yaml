@@ -14,7 +14,7 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: haproxy
     haproxy.org/response-set-header: |
-      access-control-allow-origin "https://{{ .Values.global.domain }}"
+      access-control-allow-origin "*"
     haproxy.org/path-rewrite: /api-internal(.*) /_drop_
 
 spec:
