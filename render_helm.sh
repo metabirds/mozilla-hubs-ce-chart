@@ -4,13 +4,13 @@ bins=("bash" "openssl" "npm")
 for cmd in "${bins[@]}"; do
     if ! command -v $cmd &> /dev/null; then
         echo "missing required binary: $cmd"
-        return 1
+        exit 1
     fi
 done
 
 if ! npm list -g pem-jwk | grep -q pem-jwk; then
     echo "missing required npm pkg: pem-jwk, try (sudo) npm install pem-jwk -g to install it"
-    return 1
+    exit 1
 fi
 
 read -rsp $'Press any key to continue... (This will wipe your config.yaml)\n' -n1 key
